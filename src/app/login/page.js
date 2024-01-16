@@ -26,7 +26,7 @@ const Login = () =>{
                             Log in to your Account
                         </div>
                         <div className="text-xs pt-2 text-gray-500">
-                            lasldasdl lasdas lalasldlasasdasdlaksdlkasd
+                            lasldasdl lasdas lalasldlasasdasdlaksdlkass
                         </div>
                     </div>
                     <div className="w-full max-w-[400px] h-14 bg-white flex">
