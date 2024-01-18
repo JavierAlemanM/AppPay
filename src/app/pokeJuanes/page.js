@@ -2,8 +2,74 @@
 
 import { IoIosSearch } from "react-icons/io";
 import Pokemon from "../componenteJuanes/pokemon";
+import { useEffect, useState } from "react";
+import { Controller } from "react-hook-form";
 
-const pockeJuanes = () => {
+const pokeJuanes = () => {
+/*
+    const [endPoint, setEndPoint] = useState('https://pokeapi.co/api/v2/pokemon/');
+    const [search , setSearch ] = useState('');
+    const [url , setUrl ] = useState('https://pokeapi.co/api/v2/pokemon/');
+
+    const getSearch = (e) => {
+        setSearch(e.target.value);
+    }
+
+    const changeUrl = () =>{
+        let newUrl = endPoint+search;
+        setUrl(newUrl);
+    }
+
+    useEffect(()=>{
+        const getData = async () =>{
+            try {
+                const response =   await fetch(url);
+                const result = await response.json();
+                console.log(result);
+                
+    
+            } catch (error) {
+                console.log(error)
+            }
+    
+        }
+        getData();
+
+    },[url])
+
+   */
+
+    const [endPoint, setEndPoint] = useState('https://dragonball-api.com/api/characters/');
+    const [search, setSearch] = useState('');
+    const [url, setUrl] = useState('https://dragonball-api.com/api/characters/');
+
+    const getSearch = (e) =>{
+        setSearch(e.target.value);
+    }
+
+    const changeUrl = () =>{
+        let newUrl = endPoint+search;
+        setUrl(newUrl);
+    }
+
+    useEffect(()=>{
+        const getData = async()=>{
+
+            try {
+                const response = await fetch(url);
+                const result = await response.json();
+                console.log(result);
+            } catch (error) {
+                console.log(error);
+            }
+            
+        }
+
+        getData();
+    },[url]);
+
+    
+
 
 
     return (
@@ -16,13 +82,13 @@ const pockeJuanes = () => {
                     </div>
                 </div>
                 <div className=" h-12 relative items-center flex px-0">
-                    <input  className="border-2 border-black text-lg text-black  w-80 px-3 h-10 rounded-3xl" />
+                    <input value={search} onChange={getSearch} className="border-2 border-black text-lg text-black  w-80 px-3 h-10 rounded-3xl outline-none" />
                     <div className="absolute right-0 top-0 h-12 w-10  flex justify-center items-center">
-                        <IoIosSearch className="text-black text-3xl " />
+                        <IoIosSearch className="text-black text-3xl cursor-pointer" onClick={changeUrl} />
                     </div>
                 </div>
             </header>
-            <div className="w-full  flex flex-wrap justify-center">
+            <div className="w-full  flex flex-wrap justify-center shadow-lg">
                 <Pokemon nombre="Bulbasaur" codigo="001" tipo="Grass" />
                 <Pokemon nombre="Ivysaur" codigo="002" tipo="Grass" />
                 <Pokemon nombre="Venusaur" codigo="003" tipo="Grass" />
@@ -41,4 +107,4 @@ const pockeJuanes = () => {
 
 }
 
-export default pockeJuanes;
+export default pokeJuanes;

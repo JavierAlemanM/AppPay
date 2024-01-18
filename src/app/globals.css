@@ -11,3 +11,7 @@
 .cuadrado-min{
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
 }
+.card{
+    box-shadow: inset 130px 30px 60px 0px rgba(255, 255, 255, 0.1);
+}
+

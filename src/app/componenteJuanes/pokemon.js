@@ -5,7 +5,7 @@ const Pokemon = ({codigo, nombre, tipo }) => {
     let imgUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/"+codigo+".png";
 
     return (
-        <div className="w-[280px] bg-gray-100 flex flex-col m-4 p-2 rounded-lg text-slate-900">
+        <div className="w-[280px] bg-gray-100 flex flex-col m-4 p-2 rounded-lg text-slate-900 ">
 
             <div className="flex flex-row justify-center "> 
                 <div>

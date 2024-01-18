@@ -1,9 +1,10 @@
 'use client'
 
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
-
+import { GrSecure } from "react-icons/gr";
 import React, { useState } from 'react';
-
+import Image from 'next/image';
+import celuco from "../../../public/img/1200.webp";
 
 
 const cardJuanes = () => {
@@ -61,15 +62,15 @@ function handleChangeCcv(e) {
                                     checkout
                                 </div>
                             </div>
-                            <div className=" w-full h-48 bg-black px-4 flex justify-center items-center ">
-                                <div className="flex-col  w-[270px] h-40 bg-slate-600 rounded-3xl">
+                            <div className=" w-full h-44 bg-black px-4 flex justify-center items-center ">
+                                <div className="card flex-col  w-[270px] h-36 bg-gray-700 rounded-3xl">
                                     <div className="h-1/2 justify-center items-center flex">
                                         <div className="w-1/2 h-full">
-                                            <div className="left-5 top-3 w-10 bg-slate-800 h-7 items-center flex-col relative rounded-lg">
-                                                <div className="right-0.5  h-2.5 text-white  text-xs font-semibold flex top-0.5 absolute" >
+                                            <div className="left-5 top-3 w-10 bg-black h-6 items-center flex-col relative rounded-lg">
+                                                <div className="right-0.5  h-2.5 text-white  text-xs font-medium flex top-0 absolute" >
                                                     AM
                                                 </div>
-                                                <div className="right-0.5  h-2 text-white  text-xs font-semibold flex bottom-2 absolute" >
+                                                <div className="right-0.5  h-2 text-white  text-xs font-medium flex bottom-1.5 absolute" >
                                                     EX
                                                 </div>
                                             </div>
@@ -102,7 +103,7 @@ function handleChangeCcv(e) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="w-full text-xs pl-5 text-white font-semibold justify-start flex">
+                                        <div className="w-full text-xs pl-5 text-white font-medium justify-start flex">
                                             <p>{nameCard}</p>
                                         </div>
                                     </div>
@@ -112,26 +113,26 @@ function handleChangeCcv(e) {
                                 <div className="text-xs text-white">
                                     CARD NUMBER
                                 </div>
-                                <input type="text" value={numberCard} onChange={handleChangeNum} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 w-[268px] px-3 h-8 rounded-lg"/>
-                                <div className="mt-3 text-xs text-white">
+                                <input type="text" value={numberCard} onChange={handleChangeNum} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 w-[268px] px-3 h-7 rounded-lg"/>
+                                <div className="mt-2 text-xs text-white">
                                     NAME ON CARD
                                 </div>
-                                <input type="text" value={nameCard} onChange={handleChangeNam} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 w-[268px] px-3 h-8 rounded-lg"/>
+                                <input type="text" value={nameCard} onChange={handleChangeNam} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 w-[268px] px-3 h-7 rounded-lg"/>
                                 <div className="px-0 flex justify-between " >
                                     <div className=" ">
-                                        <div className="mt-3 text-xs text-white">
+                                        <div className="mt-2 text-xs text-white">
                                         EXPIRITY DATE
                                         </div>
-                                        <input type="text" value={expirityCard} onChange={handleChangeExp} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 px-3 w-32 h-8 rounded-lg"/>
+                                        <input type="text" value={expirityCard} onChange={handleChangeExp} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 px-3 w-32 h-7 rounded-lg"/>
                                     </div>
                                     <div className=" ">
-                                        <div className="mt-3 text-xs text-white">
+                                        <div className="mt-2 text-xs text-white">
                                         CVV
                                         </div>
-                                        <input type="text" value={ccvCard} onChange={handleChangeCcv} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 px-3 w-32 h-8 rounded-lg"/>
+                                        <input type="text" value={ccvCard} onChange={handleChangeCcv} className="border-[1.5px] text-sm bg-slate-600 text-white my-1 px-3 w-32 h-7 rounded-lg"/>
                                     </div>
                                 </div>
-                                <div className="cursor-pointer font-bold text-black text-xs bg-white mt-3 w-[268px] px-3 h-8 rounded-lg justify-center items-center flex">
+                                <div className="cursor-pointer font-bold text-black text-xs bg-white mt-3 w-[268px] px-3 h-7 rounded-lg justify-center items-center flex">
                                     Add your card
                                 </div>
                             </div>
@@ -139,8 +140,26 @@ function handleChangeCcv(e) {
 
                         </div>
                     </div>
-                    <div className="w-1/2 bg-red-400">
-                        2
+                    <div className="w-1/2 bg-slate-100 justify-center py-32 flex relative">
+                        
+                        <div className="items-center flex flex-col relative w-72 h-96 ">
+                            <div className="">
+                                Iphone 13 Pro
+                            </div>
+                            <div>
+                                <Image src={celuco}
+                                    width={500}
+                                    height={500}
+                                    alt="Picture of the author" />
+                            </div>
+                            <div className="">$1690,00</div>
+                        </div>
+                        <div className="text-green-600 absolute bottom-0 right-0 py-1  px-2 flex justify-center items-center">
+                            <GrSecure className="font-bold flex right-0" />
+                            <div >SECURE CHECKOUT</div>
+                            
+                            
+                        </div>
                     </div>
                 </div>
                
